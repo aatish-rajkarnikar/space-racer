@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/meteor_small.gd" type="Script" id=1]
+[ext_resource path="res://PNG/Meteors/meteorBrown_small1.png" type="Texture" id=2]
+
+[node name="Area2D" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+speed = 500
+rotation_speed = 1.5
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -6.88721, -12.3189, 9.77387, -11.7541, 12.8096, 4.34217, 0.313766, 12.6021, -9.42873, 9.5664, -13.3822, -1.58805 )
+
+

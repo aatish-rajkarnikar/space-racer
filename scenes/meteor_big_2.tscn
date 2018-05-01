@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/meteor_big_2.gd" type="Script" id=1]
+[ext_resource path="res://PNG/Meteors/meteorBrown_big2.png" type="Texture" id=2]
+
+[node name="Area2D" type="Area2D" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Visibility" ]
+speed = 300
+rotation_speed = 1
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -3.03485, 30.3484, 44.0051, 18.209, 56.9032, -25.7961, 8.34583, -44.7639, -37.9355, -38.6942, -58.4207, -4.55228, -52.351, 26.5548, -25.7961, 47.7987 )
+
+[connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
+
+

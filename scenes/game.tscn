@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://background.jpg" type="Texture" id=2]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+
+[node name="Node" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 597.168, 1006.16 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="player" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 579.396, 1746.46 )
+
+[node name="meteor_spwan_timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 0.3
+one_shot = false
+autostart = true
+
+[node name="medium_meteor_spwan_timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = true
+
+[node name="small_meteor_spwan_timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="medium_meteor_spwan_timer" to="." method="_on_medium_meteor_spwan_timer_timeout"]
+
+[connection signal="timeout" from="small_meteor_spwan_timer" to="." method="_on_small_meteor_spwan_timer_timeout"]
+
+
