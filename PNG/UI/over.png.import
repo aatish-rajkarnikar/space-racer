@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background.jpg-79b88fb6fb9ac2ea3dfbdde6ce8e779f.stex"
+path="res://.import/over.png-2accbfd928d0c9da16eb508edfe1ba2f.stex"
 
 [deps]
 
-source_file="res://background.jpg"
-source_md5="a89a21c915831ae69fd123a4fbb403e5"
+source_file="res://PNG/UI/over.png"
+source_md5="2761caa8ae7c292351786b6b385b73f7"
 
-dest_files=[ "res://.import/background.jpg-79b88fb6fb9ac2ea3dfbdde6ce8e779f.stex" ]
-dest_md5="61c6960f7dcc96f63d95bd9f486707e5"
+dest_files=[ "res://.import/over.png-2accbfd928d0c9da16eb508edfe1ba2f.stex" ]
+dest_md5="15cc6dce95758aaa9ca1b34773e22912"
 
 [params]
 

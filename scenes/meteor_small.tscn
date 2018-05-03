@@ -14,7 +14,9 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 speed = 500
-rotation_speed = 1.5
+angle = 0
+rotation_speed = 1
+health = 100
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

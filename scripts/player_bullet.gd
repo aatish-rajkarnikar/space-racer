@@ -19,4 +19,4 @@ func _on_player_bullet_area_entered(area):
 	if area.get_groups().has("meteors"):
 		area.hit(10)
 		queue_free()
-	pass # replace with function body
+	pass 
